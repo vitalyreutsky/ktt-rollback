@@ -1,0 +1,355 @@
+.application {
+  margin-bottom: 5.9vw;
+  .application-container {
+    position: relative;
+  }
+
+  .feedback {
+    margin: 0 auto;
+  }
+
+  .feedback-form {
+    max-width: 71.979vw;
+    width: 100%;
+  }
+
+  .feedback-title {
+    margin-bottom: 3vw;
+  }
+
+  .feedback-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10.417vw;
+    grid-row-gap: 1.042vw;
+    margin-bottom: 3vw;
+    max-width: 63vw;
+    transform: translateX(7.5vw);
+  }
+
+  .feedback-item {
+    position: relative;
+    padding-left: 1vw;
+    font-weight: 300;
+    font-size: 1.042vw;
+    line-height: 1.563vw;
+    opacity: 0.7;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.5vw;
+      left: 0;
+      width: 0.5vw;
+      height: 0.5vw;
+      background-color: var(--red-color);
+      border-radius: 50%;
+    }
+  }
+
+  .feedback-anim {
+    position: absolute;
+    top: -2vw;
+    right: 0;
+    width: 18.229vw;
+    height: 22.917vw;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 1.563vw;
+    width: 35.417vw;
+  }
+
+  .file-area {
+    width: 100%;
+    height: 16.7vw;
+    position: relative;
+
+    input[type="file"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .file-dummy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      padding: 1.563vw;
+      background-image: url("../img/border.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      text-align: center;
+
+      .file-success {
+        display: none;
+      }
+
+      .file-default {
+        pointer-events: none;
+      }
+
+      p {
+        max-width: 16.354vw;
+        margin: 0 auto;
+        font-weight: 300;
+        font-family: var(--font-family-GillSans);
+        font-size: 1.146vw;
+        line-height: 1.458vw;
+        color: #868686;
+      }
+    }
+
+    .file-icon {
+      width: 3.854vw;
+      height: 4.167vw;
+      fill: #3a3a3e;
+    }
+
+    //input[type="file"]:valid + .file-dummy {
+    //  border-color: rgba(0, 255, 0, 0.4);
+    //  background-color: rgba(0, 255, 0, 0.3);
+
+    //  .file-success {
+    //    display: inline-block;
+    //  }
+    //}
+  }
+}
+
+@include tablet {
+  .application {
+    margin-bottom: 13.021vw;
+
+    .main-shadow {
+      &::after {
+        top: 0;
+        height: 100%;
+      }
+    }
+
+    .title-page {
+      margin-bottom: 6.51vw;
+    }
+
+    .feedback {
+      padding: 0;
+    }
+
+    .feedback-form {
+      max-width: 100%;
+    }
+
+    .feedback-title {
+      margin-bottom: 2.604vw;
+      font-size: 4.688vw;
+      line-height: 8.594vw;
+    }
+
+    .feedback-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.604vw;
+      margin-bottom: 5.208vw;
+      max-width: 100%;
+      transform: translateX(0);
+    }
+
+    .feedback-item {
+      padding-left: 3vw;
+      font-size: 2.604vw;
+      line-height: 3.906vw;
+      &::before {
+        top: 1.3vw;
+        width: 1.302vw;
+        height: 1.302vw;
+      }
+    }
+
+    .feedback-anim {
+      display: none;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-fields {
+      gap: 3.906vw;
+      width: 100%;
+    }
+
+    .custom-checkbox__content {
+      display: flex;
+      gap: 1vw;
+    }
+
+    .file-area {
+      height: 42.839vw;
+
+      .file-dummy {
+        justify-content: center;
+        gap: 3.906vw;
+        padding: 1.563vw;
+        border-radius: 20px;
+
+        p {
+          max-width: 40.885vw;
+          font-size: 2.865vw;
+          line-height: 3.646vw;
+        }
+      }
+
+      .file-icon {
+        flex-shrink: 0;
+        width: 9.635vw;
+        height: 10.417vw;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .application {
+    margin-bottom: 18.667vw;
+    &::after {
+      top: 0;
+    }
+
+    .title-page {
+      margin-bottom: 6.51vw;
+      span {
+        white-space: nowrap;
+      }
+    }
+
+    .feedback-title {
+      margin-bottom: 2.604vw;
+      font-size: 6.933vw;
+      line-height: 17.6vw;
+    }
+
+    .feedback-list {
+      gap: 4vw;
+      margin-bottom: 10.667vw;
+    }
+
+    .feedback-item {
+      padding-left: 5vw;
+      font-size: 4.8vw;
+      line-height: 6.933vw;
+      &::before {
+        top: 2.3vw;
+        width: 2.133vw;
+        height: 2.133vw;
+      }
+    }
+
+    .feedback-anim {
+      display: none;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form__label {
+      svg {
+        left: 4vw;
+        width: 5.6vw;
+        height: 5.6vw;
+      }
+      &::after {
+        left: 13vw;
+      }
+    }
+
+    .form__input {
+      font-size: 4.267vw;
+      padding: 3.5vw 2.5vw 3.5vw 17vw;
+      border-radius: 1.333vw;
+      &::placeholder {
+        font-size: 4.267vw;
+        line-height: 7.467vw;
+      }
+    }
+
+    .custom-checkbox {
+      left: 0;
+
+      &__content {
+        display: block;
+        font-size: 3.733vw;
+        line-height: 5.867vw;
+        padding-left: 10vw;
+        br {
+          display: none;
+        }
+
+        &::before {
+          top: 0.156vw;
+          width: 6vw;
+          height: 6vw;
+          border-radius: 0.4vw;
+        }
+
+        &::after {
+          left: 1vw;
+          top: 1.2vw;
+          width: 4vw;
+          height: 4vw;
+          border-radius: 0.4vw;
+        }
+      }
+    }
+
+    .form-fields {
+      gap: 3.906vw;
+      width: 100%;
+    }
+
+    .file-area {
+      height: 70.933vw;
+
+      .file-dummy {
+        gap: 8vw;
+        padding: 5.333vw;
+        border-radius: 5.333vw;
+        background-image: url("../img/border2.svg");
+        background-size: 100%;
+
+        p {
+          max-width: 80%;
+          font-size: 4.267vw;
+          line-height: 4.8vw;
+        }
+      }
+
+      .file-icon {
+        width: 14.133vw;
+        height: 15.467vw;
+      }
+    }
+  }
+}

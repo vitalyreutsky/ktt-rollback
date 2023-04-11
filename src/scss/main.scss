@@ -1,0 +1,36 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения мелких компонентов страницы
+@import "./components/btns";
+@import "./components/title";
+@import "./components/scroll-to";
+@import "./components/animation-images";
+@import "./components/pagination";
+
+// подключения основных компонентов страницы
+@import "./components/header";
+@import "./components/menu";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/business";
+@import "./components/leaders";
+@import "./components/geography";
+@import "./components/news";
+@import "./components/about-company";
+@import "./components/about-grid";
+@import "./components/about-history";
+@import "./components/mission";
+@import "./components/strategy";
+@import "./components/carrier";
+@import "./components/feedback";
+@import "./components/contacts";
+@import "./components/press-center";
+@import "./components/news-single";
+@import "./components/activity";
+@import "./components/work";
+@import "./components/modal";
+@import "./components/footer";

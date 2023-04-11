@@ -1,0 +1,226 @@
+.about-company {
+  position: relative;
+  padding-top: 2.688vw;
+  margin-bottom: 8.3vw;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    width: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 43.75vw;
+  }
+
+  &__title {
+    position: relative;
+    top: 1.5vw;
+    margin-bottom: 3.5vw;
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.042vw;
+    .text-page {
+      margin: 0;
+    }
+  }
+
+  &__swiper {
+    margin: 0;
+    flex-shrink: 0;
+    border-radius: 10px;
+  }
+
+  &__wrapper {
+    width: 35.417vw;
+    height: 37.656vw;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 1.563vw;
+  }
+
+  &__pagination {
+    display: flex;
+    gap: 1.042vw;
+    justify-content: center;
+    .swiper-pagination-bullet {
+      width: 1.615vw;
+      height: 0.208vw;
+      margin: 0 !important;
+      background: rgba(255, 255, 255, 0.51);
+      opacity: 1;
+      border-radius: 18px;
+      transition: all 0.3s ease-out;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 3.229vw;
+      background: var(--red-color);
+      opacity: 1;
+    }
+  }
+
+  &__anim {
+    position: absolute;
+    right: -3vw;
+    top: 35vw;
+    width: 100%;
+    height: 12.031vw;
+  }
+}
+
+@include tablet {
+  .about-company {
+    padding-top: 15.625vw;
+    margin-bottom: 0;
+
+    .hero-text {
+      max-width: 100%;
+    }
+
+    &__inner {
+      flex-direction: column;
+      gap: 5.208vw;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 5vw;
+    }
+
+    &__text {
+      gap: 3.906vw;
+    }
+
+    &__wrapper {
+      width: 100%;
+      height: 61.328vw;
+      border-radius: 10px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: 3.906vw;
+    }
+
+    &__pagination {
+      gap: 2.604vw;
+      .swiper-pagination-bullet {
+        width: 4.036vw;
+        height: 0.521vw;
+        border-radius: 2.344vw;
+      }
+
+      .swiper-pagination-bullet-active {
+        width: 8.073vw;
+      }
+    }
+
+    &__anim {
+      position: relative;
+      top: 0;
+      left: -7vw;
+      width: 285.286vw;
+      height: 30.078vw;
+      margin-top: 10vw;
+    }
+  }
+}
+
+@include mobile {
+  .about-company {
+    padding-top: 25vw;
+    margin-bottom: 0;
+
+    .scroll-to {
+      display: none;
+    }
+
+    .hero-text {
+      max-width: 100%;
+    }
+
+    &__container {
+      gap: 15.36px;
+    }
+
+    &__inner {
+      gap: 6.933vw;
+    }
+
+    &__title {
+      margin-bottom: 8vw;
+    }
+
+    &__text {
+      gap: 5.333vw;
+    }
+
+    &__wrapper {
+      height: 61.328vw;
+      border-radius: 10px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: 5.333vw;
+    }
+
+    &__pagination {
+      gap: 5.333vw;
+      .swiper-pagination-bullet {
+        width: 8.267vw;
+        height: 1.067vw;
+        border-radius: 4.8vw;
+      }
+
+      .swiper-pagination-bullet-active {
+        width: 16.533vw;
+      }
+    }
+
+    &__anim {
+      position: relative;
+      top: 0;
+      left: -73vw;
+      width: 586.667vw;
+      height: 50vw;
+      margin-top: 10vw;
+    }
+  }
+}

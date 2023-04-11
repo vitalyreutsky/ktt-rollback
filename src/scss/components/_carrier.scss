@@ -1,0 +1,148 @@
+.carrier {
+  position: relative;
+  padding-top: 2.688vw;
+  margin-bottom: 8.3vw;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    width: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.083vw;
+  }
+
+  &__title {
+    position: relative;
+    top: 1.5vw;
+    margin-bottom: 3.5vw;
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.042vw;
+    .text-page {
+      margin: 0;
+      font-size: 1.042vw;
+      line-height: 1.563vw;
+    }
+  }
+
+  &__img {
+    flex-shrink: 0;
+    width: 42.708vw;
+    height: 32.813vw;
+    border-radius: 10px;
+    mix-blend-mode: color-dodge;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__anim {
+    position: absolute;
+    right: 4vw;
+    top: 30.5vw;
+    width: 100%;
+    height: 12.031vw;
+  }
+}
+
+@include tablet {
+  .carrier {
+    padding-top: 20vw;
+    margin-bottom: 3vw;
+
+    &__container {
+      gap: 2vw;
+    }
+
+    &__inner {
+      flex-direction: column;
+      gap: 6.51vw;
+    }
+
+    &__title {
+      top: 1.5vw;
+      margin-bottom: 3.5vw;
+    }
+
+    &__text {
+      gap: 2.604vw;
+      .text-page {
+        max-width: 100%;
+        font-size: 2.865vw;
+        line-height: 4.688vw;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 70.833vw;
+      margin-bottom: 3vw;
+    }
+
+    &__anim {
+      position: relative;
+      width: 207vw;
+      height: 21vw;
+      top: 0;
+      right: 3vw;
+    }
+  }
+}
+
+@include mobile {
+  .carrier {
+    padding-top: 25vw;
+    margin-bottom: 3vw;
+    .scroll-to {
+      display: none;
+    }
+
+    &__container {
+      gap: 0;
+    }
+
+    &__inner {
+      flex-direction: column;
+      gap: 6.51vw;
+    }
+
+    &__title {
+      top: 0;
+      margin-bottom: 8vw;
+    }
+
+    &__text {
+      gap: 5.333vw;
+      .text-page {
+        font-size: 4.8vw;
+        line-height: 6.933vw;
+      }
+    }
+
+    &__img {
+      height: 70.833vw;
+      margin-bottom: 5.333vw;
+    }
+
+    &__anim {
+      left: -73vw;
+      width: 586.667vw;
+      height: 50vw;
+      margin-top: 10vw;
+    }
+  }
+}
