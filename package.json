@@ -3,8 +3,8 @@
   "version": "2.1.0",
   "description": "gulp-builder for weblayout",
   "main": "gulpfile.js",
-  "homepage": "https://vitalyreutsky.github.io/ktt/",
-  "scripts": {  
+  "homepage": "https://vitalyreutsky.github.io/ktt-rollback/",
+  "scripts": {
     "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
     "dev": "gulp",
     "build": "gulp build",
